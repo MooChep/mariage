@@ -28,27 +28,25 @@
       <label>Prénom :</label>
       <input type="text" name="prenom" placeholder="Willy" required>
 
-      <label>Email :</label>
-      <input type="mail" name="email" placeholder="exemple@email.com" >
-
       <label>Nombre de personnes :</label>
       <input type="number" name="nb_personnes" min="1" placeholder="Entrer le nombre de personnes" required>
 
       
       <label>Serez-vous présent ?</label>
-      <input type="radio" id="oui" name="presence" value="oui">
-      <label for="oui">Oui</label><br>
-      <input type="radio" id="non" name="presence" value="non">
-      <label for="non">Non</label><br>
+      <input type="checkbox" id="vin" name="presence" value="vin">
+      <label for="vin">Seulement au vin d'honneur</label>
+      <input type="checkbox" id="repas" name="presence" value="repas">
+      <label for="repas">Seulement au repas</label>
+      <input type="checkbox" id="les deux" name="presence" value="les deux">
+      <label for="les deux">Toute la journée !</label>
+      <input type="checkbox" id="brunch" name="presence" value="brunch">
+      <label for="brunch">Au brunch du lendemain</label>
+      <input type="checkbox" id="non" name="presence" value="non">
+      <label for="non">Malheureusement, non !</label><br>
 
-      <label>Régime alimentaire :</label>
-      <input type="radio" id="sansRegime" name="regime" value="sans">
-      <label for="sans">Sans régime spécifique</label><br>
-      <input type="radio" id="vegetarien" name="regime" value="vege">
-      <label for="vege">Végétarien</label><br>
-      <input type="radio" id="vegan" name="regime" value="vegan">
-      <label for="vegan">Végan</label><br>
-
+      <label>Restriction alimentaire :</label>
+      <input type="text" id="sansRegime" name="regime" placeholder="Régime spécifique, allergies...">
+      
       <label>Titre et auteur de la musique qui vous fait danser jusqu'au bout de la nuit :</label>
       <input type="text" name="message" placeholder="Entrer le Titre et l'auteur">
 
