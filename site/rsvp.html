@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmer sa présence</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Confirmation de présence</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="events.html">Déroulé</a>
+      <a href="rsvp.html">Confirmation</a>
+      <a href="faq.php">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <p class="content-box">Merci de bien vouloir répondre à ces quelques questions pour nous aider à organiser
+         notre mariage, nous sommes impatient de vous retrouver ! </p><br> <p class="comment"> Toutes les informations renseignées dans ce 
+         formulaire resteront privées et seront visionnée uniquement par Camille et Ilan</p>
+    <form action="php/rsvp_handler.php" method="POST">
+      <label>Nom :</label>
+      <input type="text" name="nom" placeholder="Wonka"required>
+
+      <label>Prénom :</label>
+      <input type="text" name="prenom" placeholder="Willy" required>
+
+      <label>Email :</label>
+      <input type="mail" name="email" placeholder="exemple@email.com" >
+
+      <label>Nombre de personnes :</label>
+      <input type="number" name="nb_personnes" min="1" placeholder="Entrer le nombre de personnes" required>
+
+      
+      <label>Serez-vous présent ?</label>
+      <input type="radio" id="oui" name="presence" value="oui">
+      <label for="oui">Oui</label><br>
+      <input type="radio" id="non" name="presence" value="non">
+      <label for="non">Non</label><br>
+
+      <label>Régime alimentaire :</label>
+      <input type="radio" id="sansRegime" name="regime" value="sans">
+      <label for="sans">Sans régime spécifique</label><br>
+      <input type="radio" id="vegetarien" name="regime" value="vege">
+      <label for="vege">Végétarien</label><br>
+      <input type="radio" id="vegan" name="regime" value="vegan">
+      <label for="vegan">Végan</label><br>
+
+      <label>Titre et auteur de la musique qui vous fait danser jusqu'au bout de la nuit :</label>
+      <input type="text" name="message" placeholder="Entrer le Titre et l'auteur">
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Notre Mariage</p>
+  </footer>
+</body>
+</html>

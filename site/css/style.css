@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&family=Quicksand:wght@500&display=swap');
+
+/* === Variables === */
+:root {
+  --color-bg: #fff8f0;
+  --color-text: #333;
+  --color-text-comment: #666;
+
+  --primary: #ff6f91;
+  --primary-dark: #ff2e63;
+  --secondary: #845ec2;
+  --accent: #fcb045;
+
+  --input-bg: #fffefc;
+  --input-border: #fcb045;
+
+  --shadow-light: 0 8px 15px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 0 20px rgba(255, 111, 145, 0.4);
+  --radius: 20px;
+  --transition: 0.3s ease;
+
+  --form-control-color: rebeccapurple;
+
+
+}
+
+/* === Reset === */
+*,
+*:before,
+*:after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Global === */
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* === Header === */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-light);
+}
+
+header h1 {
+  font-family: 'Yeseva One', cursive;
+  font-size: 3.5rem;
+  text-shadow: 2px 2px var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+/* === Navigation === */
+nav {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 25px;
+  color: white;
+  background-color: var(--secondary);
+  transition: var(--transition);
+}
+
+nav a:hover {
+  background-color: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+/* === Main content === */
+main {
+  margin-top: 60px;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  align-items: center;
+  gap: 30px;
+}
+
+section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+section img {
+  flex: 1 1 400px;
+  max-width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-light);
+}
+
+.section-content {
+  flex: 1 1 400px;
+}
+
+.content-box {
+  background: white;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-light);
+}
+
+.comment {
+  color: var(--color-text-comment);
+  padding: 0px;
+  margin: 0px 0px 20px 30px;
+  font-size: 90%;
+}
+
+h2 {
+  font-family: 'Yeseva One', cursive;
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+li {
+  font-family: 'Yeseva One', cursive;
+  font-size: 2.5rem;
+  color: var(--color-bg);
+  margin-bottom: 30px;
+  list-style: none;
+  text-align:center;
+  background-color: var(--primary-dark);
+  border: none;
+  border-radius: 20px;
+  padding: 1px;
+}
+/* === Formulaires === */
+form {
+  background: white;
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-light);
+}
+
+label {
+  display: inline;
+  margin-top: 20px;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 2px solid var(--input-border);
+  border-radius: 15px;
+  font-size: 1rem;
+  background-color: var(--input-bg);
+}
+input::placeholder {
+  font-weight:lighter;
+  opacity: 0.4;
+  color: var(--color-text-comment);
+}
+
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label {
+  padding: 0.3rem 0.5rem;
+}
+input[type="radio"]:checked + label {
+  border: 1px solid var(--primary-dark);
+}
+
+
+/* === Boutons === */
+button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover {
+  background: var(--accent);
+  transform: scale(1.05);
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  margin-top: 100px;
+  padding: 30px;
+  background-color: var(--secondary);
+  color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-medium);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+}
